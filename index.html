@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="FollowUp OS: organize leads do WhatsApp, acompanhe follow-ups e pare de esquecer clientes.">
-  <title>FollowUp OS â€” Pare de esquecer clientes</title>
+  <title>FollowUp OS — Pare de esquecer clientes</title>
   <style>
     :root{--bg:#07111f;--card:#0d1a2d;--card2:#10223b;--text:#f7f9fc;--muted:#9eb0c9;--line:#213754;--green:#48e0a4;--green2:#1fc98b;--ink:#06150f}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#07111f 0%,#0a1627 55%,#07111f 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -13,6 +13,19 @@
     .mock{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.28)}.mock-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.pill{font-size:11px;font-weight:900;border-radius:999px;padding:5px 9px;background:rgba(72,224,164,.12);color:var(--green)}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{border:1px solid var(--line);border-radius:12px;padding:13px;background:var(--card2)}.metric span{font-size:11px;color:var(--muted);display:block}.metric strong{font-size:22px}.lead-row{margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:13px}.lead-row b{display:block;margin-bottom:4px}.due{color:#ffd27d;font-size:12px}
     section{padding:64px 0;border-top:1px solid var(--line)}h2{font-size:36px;letter-spacing:-.04em;margin:0 0 18px}.muted{color:var(--muted);line-height:1.7}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:20px}.card h3{margin:0 0 8px}.num{font-size:12px;color:var(--green);font-weight:900;margin-bottom:10px}.list{display:grid;gap:11px;margin-top:24px}.item{display:flex;gap:10px;color:var(--muted)}.check{color:var(--green);font-weight:900}.offer{display:grid;grid-template-columns:1fr .85fr;gap:28px;align-items:center}.price{font-size:58px;font-weight:950;letter-spacing:-.06em}.old{font-size:14px;color:var(--muted)}.fine{font-size:12px;color:var(--muted);line-height:1.55}.footer{padding:34px 0 48px;color:var(--muted);font-size:12px}
     @media(max-width:780px){.hero,.offer,.grid3{grid-template-columns:1fr}.hero{padding-top:48px}.nav .tag{display:none}.hero h1{font-size:48px}.price{font-size:48px}}
+
+    .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+    .proof-shot{margin:0;background:var(--card);border:1px solid var(--line);padding:12px;border-radius:18px;overflow:hidden}
+    .proof-shot img{display:block;width:100%;height:auto;aspect-ratio:1920/922;object-fit:contain;border-radius:10px;background:#fff}
+    .proof-shot figcaption{font-size:14px;color:var(--muted);line-height:1.5;padding:12px 6px 4px}
+    .proof-shot strong{color:var(--text);display:block;margin-bottom:4px}
+    .proof-note{font-size:12px;color:var(--muted);line-height:1.5}
+    .faq{display:grid;gap:12px;max-width:860px;margin-top:24px}
+    .faq details{border:1px solid var(--line);padding:16px 20px;border-radius:12px;background:var(--card)}
+    .faq summary{font-weight:800;cursor:pointer}
+    .faq p{margin-bottom:0}
+    @media(max-width:780px){.proof-grid{grid-template-columns:1fr}}
+
   </style>
 </head>
 <body>
@@ -21,11 +34,11 @@
     <main>
       <section class="hero" style="border-top:0">
         <div>
-          <div class="kicker">LEADS Â· FOLLOW-UP Â· WHATSAPP</div>
+          <div class="kicker">LEADS · FOLLOW-UP · WHATSAPP</div>
           <h1>Pare de perder vendas porque esqueceu de responder.</h1>
-          <p class="lead">Organize seus leads, veja quem precisa de follow-up hoje e tenha a prÃ³xima mensagem pronta â€” sem CRM complicado, sem mensalidade e sem conectar sua conta do WhatsApp.</p>
+          <p class="lead">Organize seus leads, veja quem precisa de follow-up hoje e tenha a próxima mensagem pronta — sem CRM complicado, sem mensalidade e sem conectar sua conta do WhatsApp.</p>
           <a class="cta" id="buyTop" href="https://pay.kiwify.com.br/8k9qMAH">Quero organizar meus leads</a>
-          <span class="price-note">Pagamento Ãºnico Â· R$29,90</span>
+          <span class="price-note">Pagamento único · R$29,90</span>
         </div>
         <div class="mock">
           <div class="mock-head"><strong>Seu dia de vendas</strong><span class="pill">100% LOCAL</span></div>
@@ -35,52 +48,81 @@
             <div class="metric"><span>LEADS ABERTOS</span><strong>12</strong></div>
             <div class="metric"><span>PIPELINE</span><strong>R$ 8,4k</strong></div>
           </div>
-          <div class="lead-row"><b>Mariana Â· Identidade visual</b><span class="due">Follow-up hoje Â· proposta enviada</span></div>
-          <div class="lead-row"><b>ClÃ­nica Horizonte Â· Site</b><span class="due">1 dia atrasado Â· negociaÃ§Ã£o</span></div>
+          <div class="lead-row"><b>Mariana · Identidade visual</b><span class="due">Follow-up hoje · proposta enviada</span></div>
+          <div class="lead-row"><b>Clínica Horizonte · Site</b><span class="due">1 dia atrasado · negociação</span></div>
         </div>
       </section>
 
+
+      <section id="demonstracao" aria-labelledby="demo-title">
+        <div class="kicker">VEJA O PRODUTO</div>
+        <h2 id="demo-title">Duas telas. Próximo contato mais claro.</h2>
+        <p class="muted">Estas são imagens da interface do FollowUp OS, com dados de demonstração. Você registra os contatos e decide quando enviar cada mensagem.</p>
+        <div class="proof-grid">
+          <figure class="proof-shot">
+            <img src="assets/dashboard-demo.png" width="1920" height="922" loading="lazy" decoding="async" alt="Painel do FollowUp OS exibindo fila de follow-ups e métricas de leads fictícios">
+            <figcaption><strong>Fila e prioridades</strong>Veja o que precisa de retorno hoje e o que já está atrasado.</figcaption>
+          </figure>
+          <figure class="proof-shot">
+            <img src="assets/message-demo.png" width="1920" height="922" loading="lazy" decoding="async" alt="Tela de mensagem do FollowUp OS com texto sugerido para acompanhamento comercial">
+            <figcaption><strong>Mensagem sugerida</strong>Copie o texto ou abra o WhatsApp para revisar e enviar manualmente.</figcaption>
+          </figure>
+        </div>
+        <p class="proof-note">Imagens de demonstração do próprio produto. Nenhum cliente real ou resultado financeiro é representado.</p>
+      </section>
+
       <section>
-        <h2>O lead nÃ£o sumiu. Ã€s vezes vocÃª sÃ³ nunca voltou.</h2>
-        <p class="muted">OrÃ§amentos, â€œvou pensarâ€, â€œme chama semana que vemâ€ e conversas importantes acabam enterrados no WhatsApp. FollowUp OS coloca cada oportunidade em uma fila simples para vocÃª saber o que fazer hoje.</p>
+        <h2>O lead não sumiu. Às vezes você só nunca voltou.</h2>
+        <p class="muted">Orçamentos, “vou pensar”, “me chama semana que vem” e conversas importantes acabam enterrados no WhatsApp. FollowUp OS coloca cada oportunidade em uma fila simples para você saber o que fazer hoje.</p>
         <div class="grid3">
-          <div class="card"><div class="num">01</div><h3>Registre</h3><p class="muted">Nome, serviÃ§o, valor, origem e etapa da negociaÃ§Ã£o.</p></div>
-          <div class="card"><div class="num">02</div><h3>Agende</h3><p class="muted">Defina o prÃ³ximo follow-up e veja automaticamente o que venceu ou precisa acontecer hoje.</p></div>
-          <div class="card"><div class="num">03</div><h3>Retome</h3><p class="muted">Use uma mensagem pronta por estÃ¡gio e abra o WhatsApp com o texto preenchido.</p></div>
+          <div class="card"><div class="num">01</div><h3>Registre</h3><p class="muted">Nome, serviço, valor, origem e etapa da negociação.</p></div>
+          <div class="card"><div class="num">02</div><h3>Agende</h3><p class="muted">Defina o próximo follow-up e veja automaticamente o que venceu ou precisa acontecer hoje.</p></div>
+          <div class="card"><div class="num">03</div><h3>Retome</h3><p class="muted">Use uma mensagem pronta por estágio e abra o WhatsApp com o texto preenchido.</p></div>
         </div>
       </section>
 
       <section>
         <h2>Uma ferramenta pequena para um problema caro.</h2>
         <div class="list">
-          <div class="item"><span class="check">âœ“</span><span>Pipeline com etapas de venda.</span></div>
-          <div class="item"><span class="check">âœ“</span><span>Fila de follow-ups atrasados e de hoje.</span></div>
-          <div class="item"><span class="check">âœ“</span><span>Mensagens de retomada por estÃ¡gio.</span></div>
-          <div class="item"><span class="check">âœ“</span><span>Abertura do WhatsApp com mensagem preenchida.</span></div>
-          <div class="item"><span class="check">âœ“</span><span>Valor estimado do pipeline.</span></div>
-          <div class="item"><span class="check">âœ“</span><span>Backup em JSON e exportaÃ§Ã£o CSV.</span></div>
-          <div class="item"><span class="check">âœ“</span><span>Sem login, sem servidor e sem mensalidade.</span></div>
+          <div class="item"><span class="check">✓</span><span>Pipeline com etapas de venda.</span></div>
+          <div class="item"><span class="check">✓</span><span>Fila de follow-ups atrasados e de hoje.</span></div>
+          <div class="item"><span class="check">✓</span><span>Mensagens de retomada por estágio.</span></div>
+          <div class="item"><span class="check">✓</span><span>Abertura do WhatsApp com mensagem preenchida.</span></div>
+          <div class="item"><span class="check">✓</span><span>Valor estimado do pipeline.</span></div>
+          <div class="item"><span class="check">✓</span><span>Backup em JSON e exportação CSV.</span></div>
+          <div class="item"><span class="check">✓</span><span>Sem login, sem servidor e sem mensalidade.</span></div>
         </div>
       </section>
 
       <section>
         <div class="offer">
           <div>
-            <h2>Se vocÃª vende pelo WhatsApp, comece pelo que jÃ¡ estÃ¡ na sua conversa.</h2>
-            <p class="muted">FollowUp OS foi pensado para freelancers, designers, social media, fotÃ³grafos, estÃ©tica, consultores, manutenÃ§Ã£o e pequenos prestadores de serviÃ§o.</p>
-            <p class="fine">A ferramenta ajuda a organizar acompanhamento comercial. Ela nÃ£o garante vendas, faturamento ou resposta de clientes.</p>
+            <h2>Se você vende pelo WhatsApp, comece pelo que já está na sua conversa.</h2>
+            <p class="muted">FollowUp OS foi pensado para freelancers, designers, social media, fotógrafos, estética, consultores, manutenção e pequenos prestadores de serviço.</p>
+            <p class="fine">A ferramenta ajuda a organizar acompanhamento comercial. Ela não garante vendas, faturamento ou resposta de clientes.</p>
           </div>
           <div class="card" id="comprar">
             <div class="kicker">FOLLOWUP OS V0</div>
             <div class="price">R$29,90</div>
-            <div class="old">Pagamento Ãºnico. Sem assinatura.</div>
+            <div class="old">Pagamento único. Sem assinatura.</div>
             <a class="cta" id="checkoutCta" href="https://pay.kiwify.com.br/8k9qMAH">Comprar FollowUp OS</a>
-            <p class="fine">O botÃ£o de compra serÃ¡ ativado com o checkout oficial antes do lanÃ§amento pÃºblico.</p>
+            <p class="fine">O botão acima abre o checkout oficial da Kiwify. Revise as condições antes de concluir o pagamento.</p>
           </div>
         </div>
       </section>
+
+      <section id="duvidas" aria-labelledby="faq-title">
+        <h2 id="faq-title">Antes de comprar</h2>
+        <div class="faq">
+          <details><summary>Preciso conectar o meu WhatsApp?</summary><p class="muted">Não. A ferramenta organiza os contatos localmente e permite abrir uma mensagem pré-preenchida no WhatsApp. Você escolhe se vai enviá-la.</p></details>
+          <details><summary>O FollowUp OS manda mensagens sozinho?</summary><p class="muted">Não. Não há disparo automático de mensagens nem acesso à sua conta. O envio é manual.</p></details>
+          <details><summary>Onde ficam os dados dos clientes?</summary><p class="muted">Na versão V0, os registros ficam armazenados localmente no navegador deste dispositivo. Para transferir ou proteger seus dados, use a exportação de backup em JSON.</p></details>
+          <details><summary>É assinatura?</summary><p class="muted">Não. A oferta atual é de R$29,90 em pagamento único.</p></details>
+        </div>
+      </section>
+
     </main>
-    <div class="footer">FollowUp OS Â· ORION Commerce Lab Â· Dados da V0 permanecem no dispositivo do usuÃ¡rio.</div>
+    <div class="footer">FollowUp OS · ORION Commerce Lab · Dados da V0 permanecem no dispositivo do usuário.</div>
   </div>
 </body>
 </html>
